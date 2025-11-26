@@ -6,7 +6,7 @@ A web-based AI chatbot that answers technical questions about backyard chicken f
 
 - 🤖 AI-powered expert advice on backyard chicken care
 - 💬 Simple, intuitive chat interface
-- 📚 Covers feeding, health, and lifecycle topics
+- 🐔 Covers feeding, health, and lifecycle topics
 - 🚀 Easy to set up and run
 
 ## Prerequisites
@@ -32,9 +32,9 @@ A web-based AI chatbot that answers technical questions about backyard chicken f
    pip install --index-url https://pypi.org/simple/ -r requirements.txt
    ```
 
-4. Set up your OpenAI API key:
+4. Set up your API keys:
    - Create a `.env` file in the project root
-   - Add your API key:
+   - Add your OpenAI API key (required):
      ```
      OPENAI_API_KEY=your_openai_api_key_here
      ```
@@ -69,6 +69,7 @@ FlyGenious/
 ├── app.py                 # Main Gradio application with OpenAI integration
 ├── requirements.txt       # Python dependencies
 ├── .gitignore           # Git ignore file
+├── LICENSE              # MIT License
 └── README.md            # This file
 ```
 
@@ -86,10 +87,11 @@ response = client.chat.completions.create(
 ## Troubleshooting
 
 - **API Key Error**: Make sure your `.env` file exists and contains a valid `OPENAI_API_KEY`
-- **Import Errors**: Ensure all dependencies are installed: `pip install -r requirements.txt`
+- **Import Errors**: Ensure all dependencies are installed: `pip install --index-url https://pypi.org/simple/ -r requirements.txt`
 - **Port Already in Use**: Change the port in `app.py` (line with `server_port=7860`)
+- **Module Not Found**: Make sure your virtual environment is activated: `source venv/bin/activate`
 
 ## License
 
-This project is open source and available for personal and commercial use.
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
